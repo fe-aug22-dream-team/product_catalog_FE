@@ -1,0 +1,73 @@
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.footer_inside {
+    display: flex;
+    flex: 0.5;
+    padding: 1rem 0;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.logo {
+    height: 30px;
+    width: 90px; 
+}
+
+.logo::before {
+    content: url('../icons/palmOK.svg');
+    position: relative;
+}
+
+.footer_links {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #89939A;
+}
+
+.footer_back_link {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right; 
+
+    color: #89939A;
+}
+
+.footer_button {
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #B4BDC4;
+    color: white;
+    border-radius: 48px;
+    background: white;
+    cursor: pointer;
+}
+
+.footer_button::before {
+    content: url('../icons/Vector.svg');
+    position: relative;
+    top: -10%;
+}
+
+.footer_button_container {
+    width: 120px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
