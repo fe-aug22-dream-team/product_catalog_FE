@@ -24,13 +24,13 @@ export const Footer: FC = () => {
           type='button' 
           className={styles.footer_button}
         >
-          <a href="#header">
+          <Link href="#header">
             <Image 
               src={footerButton}
               className={styles.footer_button_image}
               alt='Image for footer button'
             /> 
-          </a>
+          </Link>
         </button>
       </div>
     </footer>
