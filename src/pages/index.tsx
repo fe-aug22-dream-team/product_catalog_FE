@@ -1,3 +1,10 @@
+import { Footer } from '../components/Footer';
+import { PaginationPage } from '../components/PaginationPage';
+
 export default function Home() {
-  return <button className="button">Click</button>;
+  return (
+    <>
+      <Footer />
+    </>
+  );
 }
