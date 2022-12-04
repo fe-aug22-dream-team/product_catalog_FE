@@ -7,13 +7,9 @@ import Close from '../../public/img/header_img/close.svg';
 import Open from '../../public/img/header_img/menu.svg';
 import Link from 'next/link';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const navigate = useNavigate();
-
-  const goCart = () => navigate('/shopping');
 
   const openMenu = () => {
     setIsOpen(true);
@@ -112,9 +108,9 @@ export default function Header() {
           <Link href="/favourites" className={styles.link__nav}>
             <Image className={styles.img} src={Fav} alt="favourites" />
           </Link>
-          <button onClick={goCart} className={styles.link__nav}>
+          <Link href="/shopping" className={styles.link__nav}>
             <Image className={styles.img} src={Shopping} alt="shopping" />
-          </button>
+          </Link>
         </div>
         <div className={styles.menu}>
           <Link href="#" onClick={openMenu} className={styles.link__nav}>
