@@ -10,7 +10,7 @@ import { prisma } from '../../server/prisma';
 import { trpc } from '../../utils/trpc';
 import { Footer } from '../../components/Footer';
 import PhoneInfo from '../../components/PhoneInfo';
-import Header from '../../components/Header';
+import {Header} from '../../components/Header';
 import { Recomended } from '../../components/Recomended';
 import Head from 'next/head';
 import { createContextInner } from '../../server/context';

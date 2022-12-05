@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Footer } from '../../components/Footer';
-import Header from '../../components/Header';
+import { Header } from '../../components/Header';
 import { PaginationPage } from '../../components/PaginationPage';
 
 function Phones({}) {

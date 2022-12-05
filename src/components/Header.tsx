@@ -7,9 +7,11 @@ import Close from '../../public/img/header_img/close.svg';
 import Open from '../../public/img/header_img/menu.svg';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Header() {
+export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const router = useRouter()
 
   const openMenu = () => {
     setIsOpen(true);
