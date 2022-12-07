@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Phones } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/Favourites.module.css'
@@ -10,7 +11,7 @@ import Home from '../../../public/icons/Home.svg'
 import StrokeRight from "../../../public/icons/StrokeRight.svg"
 
 const Favourites: React.FC = () => {
-   const [phones, setPhones] = useState([]);
+   const [phones, setPhones] = useState<Phones[]>([]);
 
   async function loadFavouritesPhones(): Promise<any> {
     const favourites = localStorage.getItem('favourites');
@@ -24,7 +25,7 @@ const Favourites: React.FC = () => {
 
   useEffect(() => {
     void loadFavouritesPhones();
-  }, []);
+  }, [phones]);
   
   return (
     <>
@@ -59,7 +60,7 @@ const Favourites: React.FC = () => {
             <h3 className={styles.subHeader}>{phones.length} items</h3>
 
             <div className={styles.products}>
-                {phones.map(phone => <ProductCard product={phone} />)}
+                {phones.map(phone => <ProductCard key={phone.id} product={phone} />)}
             </div>
           </div>
         </div>
