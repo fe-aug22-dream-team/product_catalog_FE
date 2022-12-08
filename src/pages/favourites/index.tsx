@@ -27,8 +27,8 @@ const Favourites: React.FC = () => {
             <Breedcrumbs />
           </div>
           <h1 className={styles.header}>Favourites</h1>
-
-          <h3 className={styles.subHeader}>{phones?.favorites.length} items</h3>
+          
+          <h3 className={styles.subHeader}>{phones?.favorites.length || 0} items</h3>
 
           <div className={styles.products}>
             {phones &&

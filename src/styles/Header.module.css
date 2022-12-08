@@ -86,6 +86,8 @@
   border-bottom: 2px solid;
   border-color: transparent;
   transition: color 0.5s;
+  padding-left: 4px;
+  box-shadow: -1px 0px 0px #e2e6e9;
 }
 
 .list__link:hover {
@@ -125,6 +127,7 @@
 }
 
 .link__nav {
+  position: relative;
   display: flex;
   width: 64px;
   height: 64px;
@@ -169,4 +172,16 @@
 
 .img {
   margin: auto;
+}
+
+.count {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  border-radius: 50%;
+  background-color: #F447AF;
+  color: #FFFFFF;
+  width: 20px;
+  display: flex;
+  justify-content: center;
 }
