@@ -8,9 +8,13 @@ import Open from '../../public/img/header_img/menu.svg';
 import Link from 'next/link';
 import { useState } from 'react';
 import { signIn, signOut, useSession } from 'next-auth/react';
+import { trpc } from '../utils/trpc';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { data: fevPhones} = trpc.favourites.favoritesRoute.useQuery();
+  const { data: phones} = trpc.cart.cartRoute.useQuery();
+
   const { data: session } = useSession();
 
   const openMenu = () => {
@@ -121,9 +125,11 @@ export default function Header() {
         {session ? (
           <div className={styles.content__link}>
             <Link href="/favourites" className={styles.link__nav}>
+              <span className={styles.count}>{fevPhones?.favorites.length || 0}</span>
               <Image className={styles.img} src={Fav} alt="favourites" />
             </Link>
             <Link href="/cart" className={styles.link__nav}>
+              <span className={styles.count}>{phones?.cart.length || 0}</span>
               <Image className={styles.img} src={Shopping} alt="shopping" />
             </Link>
             <button
