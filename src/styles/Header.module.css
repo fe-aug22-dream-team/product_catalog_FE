@@ -82,19 +82,29 @@
 .list__link {
   text-transform: uppercase;
   color: #89939A;
-  padding-bottom: 3px;
+  padding-bottom: 26px;
   border-bottom: 2px solid;
   border-color: transparent;
   transition: color 0.5s;
   padding-left: 4px;
-  box-shadow: -1px 0px 0px #e2e6e9;
 }
 
 .list__link:hover {
   color: #0F0F11;
-  padding-bottom: 3px;
+  padding-bottom: 26px;
   border-bottom: 2px solid;
   border-color: #0F0F11;
+}
+
+.list__link_auth {
+  text-transform: uppercase;
+  color: #89939A;
+  padding-left: 4px;
+  transition: color 0.5s;
+}
+
+.list__link_auth:hover {
+  color: #0F0F11;
 }
 
 .content__link {

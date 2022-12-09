@@ -109,8 +109,9 @@ export default function Header() {
             </li>
           </ul>
         </div>
+        <div className={styles.content__link}>
         {session ? (
-          <div className={styles.content__link}>
+          <>
             <Link href="/favourites" className={styles.link__nav}>
               <span className={styles.count}>{fevPhones?.favorites.length || 0}</span>
               <Image className={styles.img} src={Fav} alt="favourites" />
@@ -126,33 +127,37 @@ export default function Header() {
             >
               Log out
             </button>
-          </div>
-        ) : (
-          <div className={styles.content__link}>
+          </>
+          ) : (
+          <div className={styles.link__nav}>
             <button
               style={{ marginRight: '10px' }}
               onClick={() => signIn()}
-              className={styles.list__link}
+              className={styles.list__link_auth}
             >
               Sign in
             </button>
           </div>
         )}
+      </div>
 
         <div className={styles.menu}>
-        {session ? (
+        
           <button onClick={openMenu} className={styles.link__nav}>
             <Image className={styles.img} src={Open} alt="menu-opener" />
           </button>
-        ): (
-          <button
-            style={{ marginRight: '10px' }}
-            onClick={() => signIn()}
-            className={styles.list__link}
-          >
-            Sign in
-          </button>
-          
+          {session ? (
+            ""
+          ): (
+          <div className={styles.link__nav}>
+            <button
+              style={{ marginRight: '10px' }}
+              onClick={() => signIn()}
+              className={styles.list__link_auth}
+            >
+              Sign in
+            </button>
+          </div>
         )}
         </div>
       </header>
